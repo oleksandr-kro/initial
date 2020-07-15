@@ -634,8 +634,8 @@
 // }
 // for (const rule of rules) {
 //     let divka = document.createElement('div')
-//     let divTitle = document.createElement('div')
-//     let divBody = document.createElement('div')
+//     let divTitle = document.createElement('h2')
+//     let divBody = document.createElement('p')
 //     divTitle.innerHTML = `${rule.title}`
 //     divBody.innerHTML = `${rule.body}`
 //     divka.appendChild(divTitle)
