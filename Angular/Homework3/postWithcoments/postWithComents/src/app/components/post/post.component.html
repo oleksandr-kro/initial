@@ -1,0 +1,13 @@
+ <div>
+   <span>ID:</span>{{ post?.id}}
+   <br>
+   <span>TITLE:</span>{{post?.title}}
+   <br>
+   <span>BODY:</span>{{post?.body}}
+   <br>
+   <button [routerLink]="['comment/',post.id]"><a>Show comments for this post</a></button>
+   <hr>
+
+ </div>
+<router-outlet></router-outlet>
+

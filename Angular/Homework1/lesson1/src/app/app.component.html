@@ -1,0 +1,14 @@
+
+
+<div *ngFor="let todo of todoArr">
+
+
+{{counterId+1}}  {{todo.id}}  {{todo.action}}
+ <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)" )>
+   <input type="text" name="todo" placeholder="your todo">
+   <button type="submit">addTODO</button>
+ </form>
+
+
+  <hr>
+</div>

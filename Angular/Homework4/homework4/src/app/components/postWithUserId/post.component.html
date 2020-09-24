@@ -1,0 +1,17 @@
+
+<div *ngFor="let sPost of posts">
+  <span>ID:</span>{{sPost?.id}}
+  <br>
+  <span>USER ID:</span>{{sPost?.userId}}
+  <br>
+  <span>TITLE:</span>{{sPost?.title}}
+  <br>
+  <span>BODY:</span>{{sPost?.body}}
+  <button [routerLink]="['comments',sPost?.id]" >Show comments for this Post</button>
+  <hr>
+</div>
+
+<router-outlet></router-outlet>
+
+
+

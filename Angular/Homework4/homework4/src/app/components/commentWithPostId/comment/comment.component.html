@@ -1,0 +1,12 @@
+<div *ngFor="let sComment of comments">
+  <span>ID:</span>{{sComment?.id}}
+  <br>
+  <span>POST ID:</span>{{sComment?.postId}}
+  <br>
+  <span>NAME:</span>{{sComment?.name}}
+  <br>
+  <span>BODY:</span>{{sComment?.body}}
+  <hr>
+</div>
+<router-outlet></router-outlet>
+
