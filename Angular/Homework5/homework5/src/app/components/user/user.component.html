@@ -1,0 +1,12 @@
+<hr>
+<router-outlet></router-outlet>
+<hr>
+<p>Тут використано: 'ActivatedRoute.params'</p>
+<div *ngFor=" let user of users ">
+  <ul>
+    <li>  {{user.name}} <button [routerLink]="['userdetails', user.id]">Show Details</button> </li>
+    <hr>
+  </ul>
+
+</div>
+

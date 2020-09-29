@@ -1,0 +1,13 @@
+<hr>
+<router-outlet></router-outlet>
+<hr>
+<p>Тут використано: 'router.navigate'</p>
+<div *ngFor=" let  todo of todos ">
+
+  <ul>
+    <li>  {{todo.title}} <button (click)="showUser(todo)">Show Details</button> </li>
+    <hr>
+  </ul>
+
+</div>
+

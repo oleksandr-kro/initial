@@ -1,0 +1,10 @@
+<hr>
+<router-outlet></router-outlet>
+<hr>
+<p>Тут використано: 'queryParams'</p>
+<div *ngFor="let comment of comments">
+  <ul>
+    <li>{{comment.name}} <button [routerLink]="['details']" [queryParams]="{commentId: comment.id}">Show details</button></li>
+  </ul>
+
+</div>

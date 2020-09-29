@@ -1,0 +1,13 @@
+<hr>
+<router-outlet></router-outlet>
+<hr>
+<p>Тут використано: 'state'</p>
+<div *ngFor=" let post of posts ">
+
+  <ul>
+    <li>  {{post.title}} <button [routerLink]="['postdetails', post.id]" [state]="{sPost: post}">Show Details</button> </li>
+    <hr>
+  </ul>
+
+</div>
+
