@@ -1,0 +1,24 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+header{
+  margin-bottom: 20px;
+}
+
+nav{
+  background-color: antiquewhite;
+}
+li{
+  list-style-type: none;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  background-color: olivedrab;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+}
