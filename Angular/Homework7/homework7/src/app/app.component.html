@@ -1,0 +1,44 @@
+<div>
+  <form #form="ngForm" (ngSubmit)="searchUser(form)">
+    <select name="id" [(ngModel)]="user.id" #id="ngModel">
+    <option value="1">one</option>
+    <option value="2">two</option>
+    <option value="3">three</option>
+    <option value="4">four</option>
+    <option value="5">five</option>
+    <option value="6">six</option>
+    <option value="7">seven</option>
+    <option value="8">eight</option>
+    <option value="9">nine</option>
+    <option value="10">ten</option>
+    </select>
+    <button>search user</button>
+  </form>
+
+<!--  <form [formGroup]="forma" (ngSubmit)="xxx()">-->
+<!--    <input type="text" formControlName="name">-->
+<!--    <p *ngIf="forma.get('name').hasError('required')"> Введіть імя</p>-->
+
+<!--    <input type="text" formControlName="surname">-->
+
+<!--    <button type="submit" [disabled]="forma.invalid">Sent</button>-->
+<!--  </form>-->
+
+</div>
+<hr>
+<div>
+  {{user?.id}}--{{user.name}}--{{user.username}}--{{user.email}}
+  <form #form="ngForm" (ngSubmit)="searchPosts(form)">
+
+  <button>Show posts by the user</button>
+  </form>
+</div>
+<hr>
+<div >
+  <div *ngFor="let post of posts">
+    <p>  {{post?.id}}--{{post.postId}}--{{post.name}}--{{post.email}}
+    </p>
+  </div>
+</div>
+
+
