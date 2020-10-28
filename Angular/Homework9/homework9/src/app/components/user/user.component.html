@@ -1,0 +1,11 @@
+<form (ngSubmit)="addUser()">
+  <button>Add new user</button>
+</form>
+<div *ngFor="let item of users">
+ {{item.id}} {{item.name}}
+<app-post></app-post>
+</div>
+<form (ngSubmit)="removeUser()">
+  <button   *ngIf="users.length>0" >Remove user</button>
+</form>
+

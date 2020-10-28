@@ -1,0 +1,32 @@
+.section-del-and-pay-about> div> img{
+  width: 80px;
+  height: 80px;
+
+}
+.section-del-and-pay-img>img{
+  height: 400px;
+  width: 549px;
+}
+.nova-poshta{
+
+  width: 400px;
+  height: 400px;
+}
+.delivery{
+  width: 400px;
+  height: 400px;
+}
+.del-and-pay {
+  display: flex;
+}
+.section-del-and-pay-about{
+  display: flex;
+  text-align: center;
+  background: azure;
+}
+.nova-poshta-about,
+.deliver-about
+{
+  padding: 10px;
+  text-align: justify;
+}
