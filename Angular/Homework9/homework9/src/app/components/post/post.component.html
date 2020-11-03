@@ -1,6 +1,15 @@
-<form [formGroup]="myForm">
-  <label for="idInput">You can write an id post for user what you want to see</label>
+
+
+<form [formGroup]="myForm" (ngSubmit)="getPosts(id)">
+  <label for="idInput">You can write an id post from 1 to 10</label>
   <input id="idInput" [formControl]="id" type="text">
  <button>Show post</button>
+  <select>
+    <option [formControl]="postId" name="option"  *ngFor="let post of posts" [value]="[post.id]">{{post.id}}</option>
+
+  </select>
+
 </form>
+
+
 

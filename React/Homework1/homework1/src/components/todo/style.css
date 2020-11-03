@@ -1,0 +1,22 @@
+
+*{
+    box-sizing: border-box;
+}
+
+span{
+    font-weight: bold;
+    line-height: 2;
+}
+div{
+    margin: 15px;
+}
+button{
+    margin-left: 10px;
+}
+p{
+    display: inline-block;
+
+}
+.status{
+    width: 30px;
+}

@@ -4,7 +4,9 @@
 <div *ngFor="let item of users">
  {{item.id}} {{item.name}}
 <app-post></app-post>
+  <hr>
 </div>
+
 <form (ngSubmit)="removeUser()">
   <button   *ngIf="users.length>0" >Remove user</button>
 </form>
