@@ -11,22 +11,15 @@ class Form extends Component {
 
     _userService = new UserService();
     state = {
-
+        users: [],
+        inputValue: 'enter name',
+        inputValueId:'enter id'
 
     };
 
-    constructor(props) {
-        super(props);
-        this.xxx = React.createRef();
-        this.state={
-            users: [],
-            inputValue: 'enter name',
-            inputValueId:'enter id'
 
-        }
-    }
 
-    async componentDidMount(id) {
+    async componentDidMount() {
         let users = await this._userService.getAllUsers();
         this.setState({users})
 
