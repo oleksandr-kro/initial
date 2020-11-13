@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {UserService} from "../../services/UserService";
 
+
 class Users extends Component {
     _userService = new UserService()
     state= {
@@ -14,11 +15,12 @@ class Users extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.backToHome} >Back to Home</button>
+                <button onClick={this.backToHome} >{'<======'}</button>
                 {
                     this.state.users.map(user=>(
                         <div key={user.id}>
                             {user.id}  {user.name}  {user.username}
+                            <button onClick={()=>this.props.history.push(`/users/${user.id}`)}>Show me this one</button>
                             <hr/>
                         </div>
 
