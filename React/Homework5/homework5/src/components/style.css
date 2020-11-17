@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+    width: 200px;
+    background-color: olivedrab;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.numList{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    color: green;
+    font-weight: bold;
+    opacity: 0.6;
+    }
+input{
+    opacity: 0.8;
+    width: 200px;
+    height: 40px;
+    color: darkblue;
+    font-weight: 900;
+    cursor: pointer;
+    background:  linear-gradient(to right, #009246 calc(100% / 3), white calc(100% / 3), white calc(100% / 3 * 2), #CE2B37 calc(100% / 3 * 2));
+}
+.wrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+.userWrapper{
+    position: fixed;
+    top: 260px;
+    font-weight: bold;
+}
+.numList:hover {
+    opacity: 1;
+}
+input:hover{
+    opacity: 1;
+}
+input:active{
+    transform: scale(.93);
+}
