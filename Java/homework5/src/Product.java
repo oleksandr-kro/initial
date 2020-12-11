@@ -3,14 +3,14 @@ import java.util.Objects;
 public class Product {
     private   String title;
     private  double price;
-    private GroceryList type;
+    private GroceryType type;
     private   int id;
     private  boolean isFresh;
 
     public Product() {
     }
 
-    public Product(String title, double price, GroceryList type, int id, boolean isFresh) {
+    public Product(String title, double price, GroceryType type, int id, boolean isFresh) {
         this.title = title;
         this.price = price;
         this.type = type;
@@ -34,11 +34,11 @@ public class Product {
         this.price = price;
     }
 
-    public GroceryList getType() {
+    public GroceryType getType() {
         return type;
     }
 
-    public void setType(GroceryList type) {
+    public void setType(GroceryType type) {
         this.type = type;
     }
 

@@ -6,12 +6,12 @@ public class Store {
 
     private List <Product> products = new ArrayList<>();
     {
-     this.products.add(new Product("tomato",44.22,GroceryList.VEGETABLES,1,true));
-     this.products.add(new Product("orange",46.22,GroceryList.FRUITS,2,true));
-     this.products.add(new Product("pepsi",24.22,GroceryList.DRINKS,3,true));
-     this.products.add(new Product("pasta",14.22,GroceryList.GROCERY,4,true));
-     this.products.add(new Product("potato",4.22,GroceryList.VEGETABLES,5,false));
-     this.products.add(new Product("juice",44.22,GroceryList.GROCERY,6,true));
+     this.products.add(new Product("tomato",44.22, GroceryType.VEGETABLES,1,true));
+     this.products.add(new Product("orange",46.22, GroceryType.FRUITS,2,true));
+     this.products.add(new Product("pepsi",24.22, GroceryType.DRINKS,3,true));
+     this.products.add(new Product("pasta",14.22, GroceryType.GROCERY,4,true));
+     this.products.add(new Product("potato",4.22, GroceryType.VEGETABLES,5,false));
+     this.products.add(new Product("juice",44.22, GroceryType.GROCERY,6,true));
 
     }
 
@@ -27,7 +27,7 @@ public class Store {
             System.out.println("Your product title includes integer");
         }
         System.out.println("Your product has been successfully added");
-       return;
+      
 
     }
 
@@ -42,15 +42,15 @@ public class Store {
             System.out.println("There is no product which title is: " + inputTitle);
         }
         System.out.println("Your product has been successfully removed");
-        return;
+
     }
     }
 
-    public void increasePrice(GroceryList inputType ) {
+    public void increasePrice(GroceryType inputType ) {
         for (Product product: products){
           if (product.getType().equals(inputType) ) product.setPrice(product.getPrice()*2);
             System.out.println("Your product price where type of product is:  " + inputType + " has been successfully changed");
-          return;
+
 
        }
 
@@ -63,17 +63,19 @@ public class Store {
 
                 premiumGoods.add(product);
 
-            }else {
+            }
+            if (premiumGoods.isEmpty()){
                 System.out.println("There is no product which price is more than: " + inputPrice);
+                return;
             }
 
-            return;
+
 
         }
         System.out.println("This is your premium product list: " + premiumGoods);
     }
 
-    public void sumOfProductsWithType(GroceryList inputType){
+    public void sumOfProductsWithType(GroceryType inputType){
        double sumOfProducts = 0;
         for (Product product: products){
             if (product.getType().equals(inputType)){

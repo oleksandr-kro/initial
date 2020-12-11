@@ -5,12 +5,12 @@ public class Main {
     public static void main(String[] args) {
 
         Store store = new Store();
-//        store.addProductToStore(new Product("apple",24.22,GroceryList.FRUITS,7,true));
+//        store.addProductToStore(new Product("apple",24.22,GroceryType.FRUITS,7,true));
 //        store.removeProduct("tomato");
 
-//       store.increasePrice(GroceryList.FRUITS);
+//       store.increasePrice(GroceryType.FRUITS);
 //        store.premiumGoods(43);
-//        store.sumOfProductsWithType(GroceryList.GROCERY);
+//        store.sumOfProductsWithType(GroceryType.GROCERY);
 //          store.averagePrice();
 
 
