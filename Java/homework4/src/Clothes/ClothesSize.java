@@ -1,5 +1,7 @@
 package Clothes;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 public enum ClothesSize  {
     XXS(40){
         @Override
