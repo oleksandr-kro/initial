@@ -1,0 +1,9 @@
+name:John
+name:Mike
+name:Joe
+age:22
+age:33
+age:14
+city:Lviv
+city:Harkiv
+city:Kyiv
