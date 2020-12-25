@@ -1,10 +1,17 @@
 public class LineStorage {
-    String line = "";
+  private String  line   = "";
+
 
     public LineStorage() {
+
     }
 
-    public LineStorage(String line) {
+
+    public  String getLine() {
+        return line;
+    }
+
+    public void setLine(String line) {
         this.line = line;
     }
 
