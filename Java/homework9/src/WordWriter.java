@@ -1,13 +1,13 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.concurrent.locks.Lock;
+
 
 public class WordWriter implements Runnable{
 
     LineStorage lineStorage;
     private File parsingWordsFromLineStorage = new File("parsingWordsFromLineStorage.txt");
-    private Lock lock;
+
 
 
 

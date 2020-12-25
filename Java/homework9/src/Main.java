@@ -1,6 +1,5 @@
 import java.io.*;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+
 
 public class Main {
 
@@ -16,12 +15,11 @@ public class Main {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        Lock lock =  new ReentrantLock();
+
 
         LineStorage lineStorage = new LineStorage();
         ContentReader contentReader = new ContentReader(lineStorage, data);
         ContentPrinter contentPrinter = new ContentPrinter(lineStorage);
-
 
 
         Thread printerThread = new Thread(contentPrinter,"printer");
