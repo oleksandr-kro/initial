@@ -57,13 +57,15 @@ export default {
     }
   },
   beforeMount() {
+    if (localStorage.getItem("favorites") === null) {
+    localStorage.setItem("favorites", null);
+}
+    EventBus.$on("favorites", (id) => {
+      this.favoritesEmit(id);
+    });
     if (localStorage.getItem("favorites") != null) {
+
       try {
-
-        EventBus.$on("favorites", (id) => {
-          this.favoritesEmit(id);
-        });
-
         this.getFavoriteMovies();
 
       } catch (e) {
@@ -72,25 +74,28 @@ export default {
     }
 
 
+
   },
 
   methods: {
     getFavoriteMovies() {
-      let favoritesId = localStorage.getItem("favorites").split(",");
-      favoritesId.forEach(id => this.getFavorites(id));
+        let favoritesId = localStorage.getItem("favorites").split(",");
+        favoritesId.forEach(id => this.getFavorites(id));
     },
     async getFavorites(id) {
-      let idParse = parseInt(id);
+     if (id != 'null'){
+       let idParse = parseInt(id);
 
-      const {
-        data: movie
-      } = await axios({
-        url: `https://api.themoviedb.org/3/movie/${idParse}`,
-        headers: {
-          Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0N2ZjZWM5NDQyZjVhODljODM1ZTBlMjg5YWU2YWNlYSIsInN1YiI6IjVmNGU0N2ZlOWVjZjE4MDAzNTk3NTI5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PZzxCOaa90zu2v8QyPVyaiYi5fafmjatFMgD9lgfAjY"
-        }
-      });
-      this.items.push(movie);
+       const {
+         data: movie
+       } = await axios({
+         url: `https://api.themoviedb.org/3/movie/${idParse}`,
+         headers: {
+           Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0N2ZjZWM5NDQyZjVhODljODM1ZTBlMjg5YWU2YWNlYSIsInN1YiI6IjVmNGU0N2ZlOWVjZjE4MDAzNTk3NTI5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PZzxCOaa90zu2v8QyPVyaiYi5fafmjatFMgD9lgfAjY"
+         }
+       });
+       this.items.push(movie);
+     }
 
     },
     pageClick(page) {
@@ -104,12 +109,6 @@ export default {
       this.getFavoriteMovies();
 
 
-      // this.items.forEach(i => {
-      //   console.log("----- " + i.id + " " + id);
-      //   if(i.id === id) {
-      //     this.items.splice(this.items.indexOf(i))
-      //   }
-      // });
     }
   }
 }

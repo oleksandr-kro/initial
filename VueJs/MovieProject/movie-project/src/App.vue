@@ -2,7 +2,6 @@
 <div>
   <Header/>
   <TopSection/>
-
   <router-view></router-view>
   <Footer/>
 </div>

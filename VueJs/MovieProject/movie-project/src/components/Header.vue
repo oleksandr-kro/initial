@@ -3,7 +3,7 @@
 
     <div>
       <b-navbar toggleable="lg" type="dark" variant="dark">
-        <b-navbar-brand href="#" style="font-size: 30px">MovieTheatre</b-navbar-brand>
+        <router-link class="home-link" href="#" style="font-size: 30px" to="/" tag="b-navbar-brand" >MovieTheatre</router-link>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -15,7 +15,15 @@
             <b-nav-form>
               <b-form-input v-model="inputValue" class="mr-sm-2" placeholder="Search for a movie" size="sm"
                             @keyup="searchForMovie()"></b-form-input>
-              <b-button class="my-2 my-sm-0" size="sm" type="submit">Search</b-button>
+              <router-link
+                  class="my-2 my-sm-0"
+                  size="sm"
+                  type="submit"
+                  tag="b-button"
+                  to="/foundmovies"
+              >Search
+              </router-link>
+<!--              <b-button class="my-2 my-sm-0" size="sm" type="submit" to="">Search</b-button>-->
             </b-nav-form>
 
 
@@ -53,5 +61,7 @@ export default {
 .mr-sm-2 {
   width: 400px;
 }
-
+.home-link{
+  cursor: pointer;
+}
 </style>

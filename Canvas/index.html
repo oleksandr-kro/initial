@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="700" height="500" id="canvas"></canvas>
+
+
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        ctx.lineWidth = 2.0;
+        ctx.beginPath();
+        ctx.moveTo(30, 10);
+        ctx.lineTo(30, 460);
+        ctx.lineTo(500, 460);
+        ctx.stroke();
+
+
+
+        for (let i = 0; i < 6; i++) {
+            ctx.fillText((5 - i) * 20 + "", 4, i * 80 + 60);
+            ctx.beginPath();
+            ctx.moveTo(25, i * 80 + 60);
+            ctx.lineTo(30, i * 80 + 60);
+            ctx.stroke();
+
+        }
+        let labels = ["JAN", "FEB", "MAR", "APR", "MAY"];
+        for (let i = 0; i < 5; i++) {
+            ctx.fillText(labels[i], 50 + i * 100, 475);
+            ctx.fillText(2020, 50 + i * 100, 485);
+        }
+
+
+        let data = [10, 53, 39, 54, 21];
+        // ctx.fillStyle = "green";
+        ctx.beginPath();
+
+        ctx.moveTo(10, 460);
+        for (let i = 0; i < data.length; i++) {
+            let dp = data[i];
+            ctx.strokeStyle = 'blue';
+            ctx.lineWidth = '3'
+
+            ctx.lineTo('', dp);
+            ctx.stroke();
+
+            // ctx.fillRect(40 + i * 100, 460 - dp * 5, 50, dp * 5);
+        }
+    </script>
+</body>
+
+</html>

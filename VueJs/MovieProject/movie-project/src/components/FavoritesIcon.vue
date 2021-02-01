@@ -42,6 +42,7 @@ export default {
       if (!localStorage.getItem("favorites")) {
         localStorage.setItem("favorites", this.id);
         this.bool = true;
+
       } else {
         let favorites = localStorage.getItem("favorites").split(",");
         if (!favorites.includes(this.id.toString())) {

@@ -2,7 +2,7 @@
 public class Main {
 
     static int[][] ships = {
-            {0, 0, 0, 0, 0, 0, 0, 1, 0, 0,},
+            {0, 0, 0, 1, 0, 0, 0, 1, 0, 0,},
             {0, 1, 0, 0, 0, 0, 0, 1, 0, 0,},
             {0, 1, 0, 1, 1, 0, 0, 0, 0, 0,},
             {0, 1, 0, 1, 1, 0, 0, 1, 1, 1,},
@@ -15,11 +15,12 @@ public class Main {
     };
 
     public static void main(String[] args) {
+
         int count = 0;
 
 
         for (int line = 0; line < ships.length; line++) {
-            for (int pos = 0; pos < ships[line].length; pos++) {
+            for (int pos = 0; pos < ships[0].length; pos++) {
 
                 if (ships[line][pos] == 1) {
                     int tempLine = line;

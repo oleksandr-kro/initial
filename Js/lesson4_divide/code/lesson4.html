@@ -95,6 +95,20 @@
 			// console.log(z); //error
 			// console.log(q); //error
 
+            for (let i = 0; i < 3; i++) {
+               setTimeout(()=>console.log(i),0);
+                
+            }
+            for (var i = 0; i < 3; i++) {
+
+                setTimeout(function(i_local) {
+                    return function() {
+                        console.log(i_local);
+                    }
+                }(i),0);
+
+            }
+
 			// функція використовує іншу функцію
 			function add2num(x, y) {
 				return x + y;
