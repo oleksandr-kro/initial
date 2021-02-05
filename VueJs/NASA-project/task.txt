@@ -1,0 +1,21 @@
+1.Please develop a one-page website which helps people to explore NASA`s expeditions to Mars.
+2.The website should provide an ability for the user to select a Rover(Curiosity, Opportunity, Spirit), Camera(Front, Rear, …) and Sol(Mars day).
+3.After the Rover, Camere and Sol were selected, the website should show the images were done by the Rover.
+4.It might be a big number of images for each Sol(Mars day) so the app should have a pagination.
+5.The pagination should be implemented in a way “Load more…” button.
+
+Using material design, please make sure that the website is pretty as much as possible as this test task is for the front-end where look and feel play a huge role.
+
+
+
+Technology
+For implementing a test task please use the technology agreed in the interview. Otherwise Vue.js, React.js, Angular can be used.
+=-=-=-=-=-=-
+Language
+Javascript or Typescript
+-=-=-=-=-=-=-=-=-
+Design
+Material design (here you can find any of UI components)
+-=-=-=-=-=-=-=-=-
+API
+https://api.nasa.gov/   scroll down and choose Mars Rover Photos section
